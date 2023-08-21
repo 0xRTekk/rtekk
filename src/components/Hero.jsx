@@ -1,19 +1,32 @@
+import Tilt from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const tiltOptions = {
+    reverse:        true,  // reverse the tilt direction
+    max:            15,     // max tilt rotation (degrees)
+    perspective:    1300,   // Transform perspective, the lower the more extreme the tilt gets.
+    scale:          1,    // 2 = 200%, 1.5 = 150%, etc..
+    speed:          2000,   // Speed of the enter/exit transition
+    transition:     true,   // Set a transition on enter/exit.
+    axis:           null,   // What axis should be disabled. Can be X or Y.
+    reset:          true,    // If the tilt effect has to be reset on exit.
+    easing:         "cubic-bezier(0.45,0.05,0.55,0.95);",    // Easing on enter/exit.
+  };
+
   return (
     <>
       <section className={`relative top-[120px] w-full h-screen mx-auto flex flex-row`}>
 
-        <div className='w-1/2'>
+        <Tilt className='w-1/2' options={tiltOptions}>
           <ComputersCanvas />
-        </div>
+        </Tilt>
 
         <div
-          className={`inset-0 w-1/2 mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+          className={`inset-0 w-1/2 mx-auto ${styles.paddingX}`}
         >
           <div>
             <h1 className={`${styles.heroHeadText} text-white mb-9`}>

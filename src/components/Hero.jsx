@@ -14,7 +14,7 @@ const Hero = () => {
     transition:     true,   // Set a transition on enter/exit.
     axis:           null,   // What axis should be disabled. Can be X or Y.
     reset:          true,    // If the tilt effect has to be reset on exit.
-    easing:         "cubic-bezier(0.45,0.05,0.55,0.95);",    // Easing on enter/exit.
+    easing:         "cubic-bezier(0.45,0.05,0.55,0.95)",    // Easing on enter/exit.
   };
 
   return (

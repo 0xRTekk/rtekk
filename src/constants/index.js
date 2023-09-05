@@ -44,78 +44,163 @@ export const navLinks = [
   },
 ];
 
-const services = [
+const skills = [
   {
-    title: "Web Developer",
+    category: "Web3 - Blockchain",
+    gradient: "from-violet-600 from-30% via-teal-500 via-70% to-lime-500 to-90%",
     icon: web,
+    technologies: [
+      {
+        name: "Ethereum",
+        level: "50%"
+      },
+      {
+        name: "Solidity",
+        level: "75%"
+      },
+      {
+        name: "Hardhat",
+        level: "80%"
+      },
+      {
+        name: "Truffle",
+        level: "50%"
+      },
+      {
+        name: "Web3.js",
+        level: "70%"
+      },
+      {
+        name: "Ethers.js",
+        level: "35%"
+      },
+      {
+        name: "Chainlink",
+        level: "25%"
+      },
+      {
+        name: "Thirdweb",
+        level: "25%"
+      },
+    ]
   },
   {
-    title: "React Native Developer",
+    category: "Frontend",
+    gradient: "from-orange-500 to-pink-500",
     icon: mobile,
+    technologies: [
+      {
+        name: "React JS",
+        level: "80%"
+      },
+      {
+        name: "Next JS",
+        level: "75%"
+      },
+      {
+        name: "Redux",
+        level: "75%"
+      },
+      {
+        name: "Typescript",
+        level: "35%"
+      },
+      {
+        name: "Three JS",
+        level: "15%"
+      },
+      {
+        name: "Tailwind CSS",
+        level: "50%"
+      },
+      {
+        name: "Sass",
+        level: "75%"
+      },
+      {
+        name: "Figma",
+        level: "50%"
+      },
+    ]
   },
   {
-    title: "Backend Developer",
+    category: "Backend",
+    gradient: "from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%",
     icon: backend,
+    technologies: [
+      {
+        name: "Express JS",
+        level: "80%"
+      },
+      {
+        name: "MySQL",
+        level: "75%"
+      },
+      {
+        name: "PostgreSQL",
+        level: "60%"
+      },
+      {
+        name: "MongoDB",
+        level: "25%"
+      },
+      {
+        name: "Socket.io",
+        level: "50%"
+      },
+      {
+        name: "Swagger",
+        level: "50%"
+      },
+      {
+        name: "PHP",
+        level: "80%"
+      },
+      {
+        name: "Symfony",
+        level: "50%"
+      },
+    ]
   },
   {
-    title: "Content Creator",
+    category: "DevOps & Tests",
+    gradient: "from-indigo-500 via-purple-500 to-pink-500",
     icon: creator,
-  },
-];
-
-const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
-  {
-    name: "JavaScript",
-    icon: javascript,
-  },
-  {
-    name: "TypeScript",
-    icon: typescript,
-  },
-  {
-    name: "React JS",
-    icon: reactjs,
-  },
-  {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: tailwind,
-  },
-  {
-    name: "Node JS",
-    icon: nodejs,
-  },
-  {
-    name: "MongoDB",
-    icon: mongodb,
-  },
-  {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
-  },
-  {
-    name: "docker",
-    icon: docker,
-  },
+    technologies: [
+      {
+        name: "Docker",
+        level: "50%"
+      },
+      {
+        name: "Circle CI",
+        level: "25%"
+      },
+      {
+        name: "GitHub actions",
+        level: "25%"
+      },
+      {
+        name: "Bash scripting",
+        level: "25%"
+      },
+      {
+        name: "Test Driven Development",
+        level: "35%"
+      },
+      {
+        name: "Unit Tests",
+        level: "50%"
+      },
+      {
+        name: "Jest",
+        level: "40%"
+      },
+      {
+        name: "Mocha & Chai",
+        level: "25%"
+      },
+    ]
+  }
 ];
 
 const experiences = [
@@ -266,4 +351,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { skills, experiences, testimonials, projects };

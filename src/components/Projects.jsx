@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
 
 const ProjectCard = ({
   index,
@@ -17,7 +17,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       {/* Card */}
       <div
         className='relative bg-tertiary rounded-2xl sm:w-[470px] w-full h-[85%]'
@@ -74,12 +74,16 @@ const ProjectCard = ({
   );
 };
 
-const Projects = () => {
 
+// Custom class name for the Project Component
+// 
+const customClassName = `${styles.paddingX} max-w-8xl mx-auto relative z-0 pt-[76px]`;
+
+const Projects = () => {
   const projectsListRef = useRef(null);
 
   return (
-    <div className={`${styles.paddingX} max-w-8xl mx-auto relative z-0 pt-[76px]`} id='projects'>
+    <div>
       {/* Heading section */}
       <motion.div variants={textVariant()} className={`${styles.paddingX} max-w-7xl mx-auto`}>
         <p className={`${styles.sectionSubText}`}>My work</p>
@@ -90,7 +94,7 @@ const Projects = () => {
       <div className='absolute w-full min-h-screen'>
         {/* Left Arrow */}
         <div
-          className='absolute top-0 left-[-5%] z-20 w-[7%] h-[92%] rounded-r-2xl flex bg-gray-950 opacity-40 hover:opacity-70 hover:scale-105 transition ease-in-out  cursor-pointer'
+          className='absolute top-0 left-[-5%] z-20 w-[7%] h-[92%] rounded-r-2xl flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out  cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,
@@ -106,7 +110,7 @@ const Projects = () => {
 
         {/* Right Arrow */}
         <div
-          className='absolute top-0 right-[2%] z-20 w-[7%] h-[92%] rounded-l-2xl flex bg-gray-950 opacity-40 hover:opacity-70 hover:scale-105 transition ease-in-out cursor-pointer'
+          className='absolute top-0 right-[2%] z-20 w-[7%] h-[92%] rounded-l-2xl flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,
@@ -131,5 +135,4 @@ const Projects = () => {
   );
 };
 
-// export default SectionWrapper(Projects, "projects");
-export default Projects;
+export default SectionWrapper(Projects, "projects", customClassName);

@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // import Tilt from "react-tilt";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 import { styles } from "../styles";
 import { skills } from "../constants";
 import { SectionWrapper } from "../hoc";
-import { fadeIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant, staggerParent, staggerChild } from "../utils/motion";
 
 
 const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, setCarouselIndex }) => {
   return (
-    <div className='skill-panel w-full'>
+    <div className='skill-panel w-full' >
       <motion.div
         variants={fadeIn("right", "spring", 0.5, 0.75)}
         className={`w-full bg-gradient-to-tr ${gradient} p-[3px] rounded-[20px] shadow-card`}
@@ -18,9 +18,18 @@ const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, set
         <div className='bg-tertiary rounded-[20px] py-8 px-10'>
           <h3 className='text-white text-[26px] mb-10 font-bold'>{category}</h3>
           <div className='tech-wrapper flex w-full'>
-            <div className='tech-list w-3/5'>
+            <motion.div
+              className='tech-list w-3/5'
+              initial="hidden"
+              animate="visible"
+              variants={staggerParent}
+            >
               {technologies.map(tech => (
-                <div className='tech' key={tech.name}>
+                <motion.div
+                  key={tech.name}
+                  className='tech'
+                  variants={staggerChild}
+                >
                   {tech.name}
                   <div className="w-full mb-5 bg-neutral-200 dark:bg-neutral-600 rounded-[20px]">
                     <div
@@ -28,9 +37,9 @@ const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, set
                       style={{ width: tech.level }}>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
             <div className='tech-icon w-2/5 flex justify-center items-center'>
               <img
                   src={icon}

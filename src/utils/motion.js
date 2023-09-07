@@ -1,4 +1,4 @@
-export const textVariant = (delay) => {
+export const textVariant = () => {
   return {
     hidden: {
       y: -50,
@@ -10,7 +10,7 @@ export const textVariant = (delay) => {
       transition: {
         type: "spring",
         duration: 1.25,
-        delay: delay,
+        delay: 0.3,
       },
     },
   };
@@ -85,4 +85,36 @@ export const staggerContainer = (staggerChildren, delayChildren) => {
       },
     },
   };
+};
+
+export const staggerParent = {
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.08
+    }
+  },
+  hidden: {
+    opacity: 0,
+    x: -10,
+    transition: {
+      type: "spring",
+      bounce: 0,
+      duration: 0.3
+    }
+  }
+};
+
+export const staggerChild ={
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { type: "spring", stiffness: 300, damping: 24 },
+  },
+  hidden: { opacity: 0, x: -100, transition: { duration: 0.2 }},
 };

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2'
 
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
@@ -31,15 +32,27 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
+    if (typeof name === 'undefined' || typeof email === 'undefined' || typeof message === 'undefined') {
+      Swal.fire({
+        position: 'top-end',
+        icon: 'error',
+        title: 'Please fill all the fields ! 😁',
+        showConfirmButton: false,
+        timer: 3000
+      });
+      setLoading(false);
+      return;
+    }
+
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Rémi Sulpice | RTekk",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "rtekk.eth@proton.me",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -47,7 +60,13 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Thank you. I will get back to you as soon as possible ! 🫡',
+            showConfirmButton: false,
+            timer: 3000
+          });
 
           setForm({
             name: "",
@@ -59,7 +78,13 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: 'Ahh, something went wrong. Please try again ! 🥲',
+            showConfirmButton: false,
+            timer: 3000
+          });
         }
       );
   };
@@ -87,7 +112,7 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="Thomas Anderson"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -98,7 +123,7 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="neo@matrix.io"
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -109,7 +134,7 @@ const Contact = () => {
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder='Follow the white rabbit...'
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>

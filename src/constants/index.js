@@ -3,26 +3,14 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
-  git,
-  figma,
-  docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  logo,
   carrent,
   jobit,
   tripguide,
-  threejs,
+  oclock,
+  alyra,
+  soledis,
+  prefpolice
 } from "../assets";
 
 export const navLinks = [
@@ -203,88 +191,6 @@ const skills = [
   }
 ];
 
-const experiences = [
-  {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "March 2020 - April 2021",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-];
-
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
     name: "Car Rent",
@@ -414,4 +320,75 @@ const projects = [
   },
 ];
 
-export { skills, experiences, testimonials, projects };
+const experiences = [
+  {
+    title: "Blockchain Developer Freelance",
+    company_name: "RTekk",
+    icon: logo,
+    iconBg: "#040816",
+    date: "Present",
+    points: [
+      "Concepting, developing and maintaining frontend and Smart Contract of Decentralized Apps.",
+      "Collaborating with other teams to givehigh-quality dApps.",
+      "Active monitoring and learning of new technologies around the blockchain ecosystem.",
+      "Participating in blockchain developers communities.",
+    ],
+  },
+  {
+    title: "Teacher Web Developer",
+    company_name: "Ecole O'clock",
+    icon: oclock,
+    iconBg: "#0CC3A7",
+    date: "Jun 2021 - Present",
+    points: [
+      "Concepting, developing and maintaining learning ressources for students.",
+      "Collaborating with other teachers, educational tutors & managers to give intense & high-quality courses in addition to personalized learner follow-up.",
+      "Active monitoring and learning of new technologies to create and teach courses.",
+      "Introduction, training and follow-up of new teachers.",
+      "Active participation in collective intelligence to improve the school's structure through ambitious projects.",
+    ],
+  },
+  {
+    title: "Blockchain Developer",
+    company_name: "Alyra Scholl",
+    icon: alyra,
+    iconBg: "#211B59",
+    date: "May 2022 - Aug 2022",
+    points: [
+      "Concepting and developing Decentralized Apps using Truffle, Solidity and other related technologies.",
+      "Learning all the stuff concerning the Ethereum blockchain development like Smart Contracts, NFTs marketplace, DeFi protocol, DAO Voting System with strong security implementation.",
+      "Collaborating developers shipp a DeFi Decentralized Apps for staking fake tokens and earn rewards.",
+      "Design and presentation of a decentralized identity blockchain project in front of a jury.",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company_name: "Soledis",
+    icon: soledis,
+    iconBg: "#ffffff",
+    date: "Jan 2020 - Oct 2021",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Integrating of large volumes of data from ERP customers to e-commerce platforms using Talend.",
+      "Implementing responsive design, ensuring cross-browser compatibility and performance.",
+      "Conception of CI/CD processes for the developers team using GitFlow & Bitbucket.",
+      "Active participation in code reviews and tickets resolution.",
+    ],
+  },
+  {
+    title: "Fullstack Developer",
+    company_name: "Préfecture de police de Paris",
+    icon: prefpolice,
+    iconBg: "#FFFFFF",
+    date: "Feb 2018 - Jul 2019",
+    points: [
+      "Developing and maintaining e-commerce platforms using PHP/MySQL, Wordpress, Prestashop and other related technologies.",
+      "Configuring raspberyPi to display information to prefecture customers",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in docker training and implementation to improve CI/CD processes.",
+    ],
+  },
+];
+
+export { skills, experiences, projects };

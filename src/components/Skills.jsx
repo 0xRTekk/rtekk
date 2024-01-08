@@ -13,9 +13,9 @@ const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, set
     <div className='skill-panel w-full' >
       <motion.div
         variants={fadeIn("right", "spring", 0.5, 0.75)}
-        className={`w-full bg-gradient-to-tr ${gradient} p-[3px] rounded-[20px] shadow-card`}
+        className={`w-full bg-gradient-to-tr ${gradient} p-[3px] rounded-[4px] shadow-card`}
       >
-        <div className='bg-tertiary rounded-[20px] py-8 px-10'>
+        <div className='bg-tertiary rounded-[4px] py-8 px-10'>
           <h3 className='text-white text-[26px] mb-10 font-bold'>{category}</h3>
           <div className='tech-wrapper flex w-full'>
             <motion.div
@@ -31,9 +31,9 @@ const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, set
                   variants={staggerChild}
                 >
                   {tech.name}
-                  <div className="w-full mb-5 bg-neutral-200 dark:bg-neutral-600 rounded-[20px]">
+                  <div className="w-full mb-5 bg-neutral-200 dark:bg-neutral-600 rounded-[4px]">
                     <div
-                      className={`bg-gradient-to-r ${gradient} p-1.5 text-center text-xs font-medium leading-none text-primary-100 rounded-[20px]`}
+                      className={`bg-gradient-to-r ${gradient} p-1.5 text-center text-xs font-medium leading-none text-primary-100 rounded-[4px]`}
                       style={{ width: tech.level }}>
                     </div>
                   </div>

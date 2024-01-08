@@ -20,7 +20,7 @@ const ProjectCard = ({
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       {/* Card */}
       <div
-        className='relative bg-tertiary rounded-2xl sm:w-[470px] w-full h-[85%]'
+        className='relative bg-tertiary rounded-[4px] sm:w-[470px] w-full h-[85%]'
       >
 
         {/* Card content */}
@@ -66,7 +66,7 @@ const ProjectCard = ({
           <img
             src={image}
             alt='project_image'
-            className='w-full h-full object-cover rounded-t-2xl'
+            className='w-full h-full object-cover rounded-t-[4px]'
           />
         </div>
       </div>
@@ -94,7 +94,7 @@ const Projects = () => {
       <div className='absolute w-full min-h-screen'>
         {/* Left Arrow */}
         <div
-          className='absolute top-0 left-[-5%] z-20 w-[7%] h-[92%] rounded-r-2xl flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out  cursor-pointer'
+          className='absolute top-0 left-[-5%] z-20 w-[7%] h-[92%] rounded-r-[4px] flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out  cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,
@@ -110,7 +110,7 @@ const Projects = () => {
 
         {/* Right Arrow */}
         <div
-          className='absolute top-0 right-[2%] z-20 w-[7%] h-[92%] rounded-l-2xl flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
+          className='absolute top-0 right-[2%] z-20 w-[7%] h-[92%] rounded-l-[4px] flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,

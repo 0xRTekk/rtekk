@@ -1,15 +1,21 @@
 import { BrowserRouter } from "react-router-dom";
+import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 
+import { background } from './assets';
 import { Skills, Contact, Experiences, Hero, Navbar, Projects, StarsCanvas } from "./components";
 
 const App = () => {
+
   return (
     <BrowserRouter>
       <div className='relative z-0 bg-primary'>
-        <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
+      <MouseParallaxContainer globalFactorX={0.2} globalFactorY={0.2}>
+        <MouseParallaxChild factorX={0.4} factorY={0.2}>
+          <img className='absolute right-5' src={background} alt="Background image block" />
+        </MouseParallaxChild>
           <Navbar />
           <Hero />
-        </div>
+      </MouseParallaxContainer>
         <Skills />
         <Projects />
         <Experiences />

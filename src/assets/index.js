@@ -7,6 +7,7 @@ import web from "./web.png";
 import github from "./github.png";
 import linkedin from "./linkedin.svg";
 import mail from "./mail.svg";
+import remi from "./remi.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
@@ -29,6 +30,7 @@ export {
   github,
   linkedin,
   mail,
+  remi,
   menu,
   close,
 

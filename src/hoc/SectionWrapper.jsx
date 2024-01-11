@@ -6,7 +6,7 @@ import { staggerContainer } from "../utils/motion";
 const StarWrapper = (Component, idName, customClassName = false) =>
   function HOC() {
 
-    const classes = customClassName ? customClassName : `${styles.padding} max-w-7xl mx-auto relative z-0`;
+    const classes = customClassName ? customClassName : `${styles.padding} max-w-7xl mx-auto h-screen relative z-0`;
 
     return (
       <motion.section

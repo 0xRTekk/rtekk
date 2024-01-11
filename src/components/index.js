@@ -1,5 +1,7 @@
 import { EarthCanvas, BallCanvas, StarsCanvas } from './canvas';
 import Hero from "./Hero";
+import About from "./About";
+import Socials from "./Socials";
 import Navbar from "./Navbar";
 import Skills from "./Skills";
 import Experiences from "./Experiences";
@@ -10,6 +12,8 @@ import CanvasLoader from "./Loader";
 
 export {
   Hero,
+  About,
+  Socials,
   Navbar,
   Skills,
   Experiences,

@@ -68,7 +68,7 @@ const Experiences = () => {
         </h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-col'>
+      <div className='mt-20 flex flex-col py-6'>
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard
@@ -82,4 +82,4 @@ const Experiences = () => {
   );
 };
 
-export default SectionWrapper(Experiences, "experiences");
+export default SectionWrapper(Experiences, "experiences", "h-full");

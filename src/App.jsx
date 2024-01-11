@@ -2,7 +2,7 @@ import { BrowserRouter } from "react-router-dom";
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 
 import { background } from './assets';
-import { Skills, Contact, Experiences, Hero, Navbar, Projects, StarsCanvas } from "./components";
+import { About, Skills, Contact, Experiences, Hero, Navbar, Projects, StarsCanvas } from "./components";
 
 const App = () => {
 
@@ -16,13 +16,10 @@ const App = () => {
           <Navbar />
           <Hero />
       </MouseParallaxContainer>
+        <About />
         <Skills />
         <Projects />
         <Experiences />
-        <div className='relative z-0'>
-          <Contact />
-          <StarsCanvas />
-        </div>
       </div>
     </BrowserRouter>
   );

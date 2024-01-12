@@ -1,26 +1,27 @@
 import React, { useRef } from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { github } from "../assets";
+import { github, website } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant, staggerContainer } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
   index,
   name,
+  state,
   description,
   tags,
   image,
   source_code_link,
+  project_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)} className='w-[32%]'>
       {/* Card */}
       <div
-        className='relative bg-tertiary rounded-md sm:w-[470px] w-full h-[85%]'
+        className='relative bg-tertiary rounded-md h-[85%] w-full shadow-card'
       >
 
         {/* Card content */}
@@ -42,21 +43,32 @@ const ProjectCard = ({
           {/* Card description & buttons */}
           <div>
             <div className='px-5'>
-              <h3 className='text-white font-bold text-3xl '>{name}</h3>
+              <div className='flex flex-row justify-between items-baseline'>
+                <h3 className='text-white font-bold text-3xl'>{name}</h3>
+                <p className={`${state.color} rounded-full p-2 font-bold text-sm`}>{state.label}</p>
+              </div>
               <p className='mt-6 text-secondary text-[14px]'>{description}</p>
             </div>
             
-            <div className='mt-8 flex flex-wrap gap-2 justify-center'>
-              <div
-                onClick={() => window.open(source_code_link, "_blank")}
-                className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
-              >
+            <div className='mt-8 flex flex-wrap gap-12 justify-center'>
+              <a href={source_code_link}>
                 <img
                   src={github}
                   alt='source code'
-                  className='w-1/2 h-1/2 object-contain'
+                  target='_blank'
+                  className='w-10 h-10 hover:scale-110 transition ease-in-out cursor-pointer'
                 />
-              </div>
+              </a>
+              {project_link && (
+                <a href={project_link}>
+                  <img
+                    src={website}
+                    alt='Web site'
+                    target='_blank'
+                    className='w-10 h-10 hover:scale-110 transition ease-in-out cursor-pointer'
+                  />
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -75,15 +87,11 @@ const ProjectCard = ({
 };
 
 
-// Custom class name for the Project Component
-// 
-const customClassName = `${styles.paddingX} max-w-8xl mx-auto relative z-0 pt-[76px]`;
-
 const Projects = () => {
   const projectsListRef = useRef(null);
 
   return (
-    <div>
+    <div className='h-full'>
       {/* Heading section */}
       <motion.div variants={textVariant()} className={`${styles.paddingX} max-w-7xl mx-auto`}>
         <p className={`${styles.sectionSubText}`}>My work</p>
@@ -91,10 +99,10 @@ const Projects = () => {
       </motion.div>
 
       {/* Carousel Arrows */}
-      <div className='absolute w-full min-h-screen'>
-        {/* Left Arrow */}
+      {/*
+        <div className='absolute w-full min-h-screen'>
         <div
-          className='absolute top-0 left-[-5%] z-20 w-[7%] h-[92%] rounded-r-md flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out  cursor-pointer'
+          className='absolute top-0 left-0 z-20 w-[7%] h-[92%] rounded-r-md flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,
@@ -108,9 +116,8 @@ const Projects = () => {
           </svg>
         </div>
 
-        {/* Right Arrow */}
         <div
-          className='absolute top-0 right-[2%] z-20 w-[7%] h-[92%] rounded-l-md flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
+          className='absolute top-0 right-0 z-20 w-[7%] h-[92%] rounded-l-md flex bg-gray-950 opacity-20 hover:opacity-50 hover:scale-105 transition ease-in-out cursor-pointer'
           onClick={() => {
             projectsListRef.current.scrollBy({
               top: 0,
@@ -124,9 +131,11 @@ const Projects = () => {
           </svg>
         </div>
       </div>
+      */}
+      
 
       {/* Projects list */}
-      <div className='flex gap-8 mt-12 min-h-screen overflow-y-hidden overflow-scroll' ref={projectsListRef}>
+      <div className='px-6 flex justify-between mt-12 h-full overflow-y-hidden overflow-scroll' ref={projectsListRef}>
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
@@ -135,4 +144,4 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, "projects", customClassName);
+export default SectionWrapper(Projects, "projects", "max-w-full sm:px-2");

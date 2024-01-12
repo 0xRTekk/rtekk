@@ -4,13 +4,13 @@ import {
   creator,
   web,
   logo,
-  carrent,
-  jobit,
-  tripguide,
+  familyStaking,
+  merci,
+  pixelDraw,
   oclock,
   alyra,
   soledis,
-  prefpolice
+  prefpolice,
 } from "../assets";
 
 export const navLinks = [
@@ -19,12 +19,12 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "skills",
-    title: "Skills",
-  },
-  {
     id: "projects",
     title: "Projects",
+  },
+  {
+    id: "skills",
+    title: "Skills",
   },
   {
     id: "experiences",
@@ -193,130 +193,85 @@ const skills = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Family Staking",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Staking dapp that allows users to stake their FMLY tokens and earn rewards. The rewards are distributed to the stakers proportionally to their staked amount.",
     tags: [
       {
-        name: "react",
+        name: "Solidity",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "ERC20",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Staking",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "React",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    state: {
+      label: "Live",
+      color: "bg-gradient-to-tr from-sky-500 to-indigo-500",
+    },
+    image: familyStaking,
+    source_code_link: "https://github.com/0xRTekk/Family-staking",
+    project_link: "https://0xrtekk.github.io/Family-staking/",
   },
   {
-    name: "Job IT",
+    name: "Pixel Draw",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Pixel Draw is a collaborative web application that allows users to draw pixel art on a canvas. Work in progress : The drawing can be saved on the blockchain and can be seen by other users.",
     tags: [
       {
-        name: "react",
+        name: "VueJs",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Typesript",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Websocket",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    state: {
+      label: "Reworking",
+      color: "bg-gradient-to-tr from-violet-500 to-fuchsia-500",
+    },
+    image: pixelDraw,
+    source_code_link: "https://github.com/0xRTekk/pixel-draw",
+    project_link: "",
   },
   {
-    name: "Trip Guide",
+    name: "Merci Map",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Merci map is a decentralized mobile application for alternative transport such as skateboards, wheelchairs and strollers. More to come soon...",
     tags: [
       {
-        name: "nextjs",
+        name: "Solidity",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "ERC20",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "ICO",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    state: {
+      label: "Designing",
+      color: "bg-gradient-to-tr from-pink-500 to-rose-500",
+    },
+    image: merci,
+    source_code_link: "#",
   },
 ];
 

@@ -10,7 +10,7 @@ import { fadeIn, textVariant, staggerParent, staggerChild } from "../utils/motio
 
 const SkillPanel = ({ category, icon, gradient, technologies, carouselIndex, setCarouselIndex }) => {
   return (
-    <div className='skill-panel w-full' >
+    <div className='skill-panel w-full mb-20'>
       <motion.div
         variants={fadeIn("right", "spring", 0.5, 0.75)}
         className={`w-full bg-gradient-to-tr ${gradient} p-[3px] rounded-md shadow-card`}

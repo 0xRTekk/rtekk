@@ -44,7 +44,7 @@ const About = () => {
         </div>
 
         <div className='w-1/3 p-10 flex justify-center items-end'>
-          <img className='rounded-md' src={remi} alt="Picture of Remi" />  
+          <img className='rounded-md shadow-card' src={remi} alt="Picture of Remi" />  
         </div>
       </motion.div>
     </>

@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { staggerContainer } from "../utils/motion";
 
-const StarWrapper = (Component, idName, customClassName = false) =>
+const StarWrapper = (Component, idName, customClassName = "") =>
   function HOC() {
 
-    const classes = customClassName ? customClassName : `${styles.padding} max-w-7xl mx-auto h-screen relative z-0`;
-
+    const classes = `${styles.padding} max-w-7xl mx-auto h-screen relative z-0 ${customClassName}`;
+    
     return (
       <motion.section
         variants={staggerContainer()}

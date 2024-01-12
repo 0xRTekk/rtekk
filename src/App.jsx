@@ -17,8 +17,8 @@ const App = () => {
           <Hero />
       </MouseParallaxContainer>
         <About />
-        <Skills />
         <Projects />
+        <Skills />
         <Experiences />
       </div>
     </BrowserRouter>

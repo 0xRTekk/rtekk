@@ -82,4 +82,4 @@ const Experiences = () => {
   );
 };
 
-export default SectionWrapper(Experiences, "experiences", "h-[100%]");
+export default SectionWrapper(Experiences, "experiences");

@@ -5,6 +5,7 @@ import Socials from "./Socials";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Experiences from "./Experiences";
+import Renovation from "./Renovation";
 
 
 export {
@@ -15,4 +16,5 @@ export {
   Projects,
   Skills,
   Experiences,
+  Renovation
 };

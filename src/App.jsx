@@ -1,4 +1,3 @@
-import { BrowserRouter } from "react-router-dom";
 import { MouseParallaxContainer, MouseParallaxChild } from "react-parallax-mouse";
 
 import { background } from './assets';
@@ -7,7 +6,6 @@ import { About, Skills, Experiences, Hero, Navbar, Projects } from "./components
 const App = () => {
 
   return (
-    <BrowserRouter>
       <div className='relative z-0 bg-primary'>
       <MouseParallaxContainer globalFactorX={0.2} globalFactorY={0.2}>
         <MouseParallaxChild factorX={0.4} factorY={0.2}>
@@ -21,7 +19,6 @@ const App = () => {
         <Skills />
         <Experiences />
       </div>
-    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,62 @@
+.homeHeader{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.backgroundImage{
+    position: absolute;
+    bottom: -10%;
+    width: 100%;
+    height: 100%;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.introHeading{
+    z-index: 1;
+    transform: scale(3.8);
+    height: 50% !important;
+}
+
+.introImage{
+    filter: brightness(70%);
+    width: 350px;
+    height: 475px;
+    position: relative;
+    bottom: -20%;
+}
+
+.introImage img{
+    object-fit: cover;
+    object-position: top;
+}
+
+.introSubHeading {
+    position: absolute;
+    width: 70%;
+    bottom: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.introSubHeading p {
+    height: 1px;
+    text-wrap: wrap;
+    text-orientation: sideways;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.4vw;
+    letter-spacing: -3px;
+    font-family: 'Poppins', sans-serif;
+    color: #8FC4B4;
+}

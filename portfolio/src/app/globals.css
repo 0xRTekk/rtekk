@@ -1,0 +1,25 @@
+@import 'node_modules/locomotive-scroll/dist/locomotive-scroll';
+
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #F1E9D4;
+  /* background-image: url("../../public/images/noise-light.png"); */
+}
+/* body:before {
+  filter: url(../../public/images/noise-light.png);
+}
+body:after, body:before {
+  position: fixed;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  z-index: 3023023023020;
+  pointer-events: none;
+  opacity: 20%;
+  color: #aeae9d;
+} */

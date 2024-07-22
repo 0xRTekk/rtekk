@@ -19,9 +19,9 @@ export default function Index() {
       scrollTrigger: {
         trigger: document.documentElement,
         scrub: true,
-        start: "+=75px",
+        start: "0px 0px",
         end: "+=500px",
-        markers: true
+        // markers: true
       },
     })
 
@@ -30,8 +30,9 @@ export default function Index() {
         scale: 2.3,
         ease: "power1.out",
       })
-      .to(introHeading.current, {y: "-300px", ease: "power1.inOut"}, 0)
-      .to(introImage.current, {height: "200px"}, 0)
+      .to(introHeading.current, {y: "-300px", ease: "power1.out"}, 0)
+      .to(introImage.current, {y: "-620px", ease: "power1.out"}, 0)
+      .to(introImage.current, {height: "200px", ease: "power1.inOut"}, 0)
       .to(subHeadingLeft.current, {x: "-300px", opacity: 0, ease: "power1.inOut"}, 0)
       .to(subHeadingRight.current, {x: "300px", opacity: 0, ease: "power1.inOut"}, 0)
   }, [])
@@ -58,9 +59,9 @@ export default function Index() {
           priority={true}
         />
 
-        <div ref={introImage} data-scroll data-scroll-speed="0.7" className={styles.introImage}>
+        <div ref={introImage} className={styles.introImage}>
           <Image
-            src={'/images/intro.png'}
+            src={'/images/hero_image.jfif'}
             alt="intro image"
             fill={true} 
             priority={true}

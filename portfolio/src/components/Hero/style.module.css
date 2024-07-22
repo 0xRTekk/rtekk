@@ -27,7 +27,7 @@
 }
 
 .introImage{
-    filter: brightness(70%);
+    /* filter: brightness(95%); */
     width: 350px;
     height: 475px;
     position: relative;
@@ -36,7 +36,8 @@
 
 .introImage img{
     object-fit: cover;
-    object-position: top;
+    object-position: center;
+    border-radius: 10px;
 }
 
 .introSubHeading {

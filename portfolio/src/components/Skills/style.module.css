@@ -1,0 +1,549 @@
+.skills {
+  width: 100%;
+  padding: 5em 0;
+}
+
+.skillsHeader {
+  padding-left: 10vw;
+}
+
+.skillsHeader h2 {
+  font-size: 4.8vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.skillsHeader h3 {
+  font-size: 1.8vw;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 3em;
+  position: relative;
+}
+
+.skillsHeader p {
+  font-size: 1.2vw;
+  font-weight: 500;
+  margin-bottom: 3em;
+}
+
+.skillsContent {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.skillCard {
+  position: relative;
+  background-color: #f1e9d410;
+  border: 1px solid #f1e9d42c;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 1px #0a0a09;
+  padding: 1.3em;
+}
+
+.skillCard1 {
+  grid-column: span 1;
+}
+
+.skillCard2 {
+  grid-column: span 2;
+}
+
+.skillCard3 {
+  grid-column: span 3;
+}
+
+.skillImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5em;
+}
+
+.skillImage img {
+  z-index: 1;
+}
+
+.skillTitle {
+  font-size: 1.4em;
+  font-weight: 800;
+  position: relative;
+  z-index: 1;
+}
+
+.skillText {
+  font-weight: 600;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.blueCircle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 3px;
+  height: 3px;
+  background-color: #007ACC;
+  border-radius: 10px;
+  animation: colorFillOut 0.1s linear;
+}
+
+/*! ANIMATIONS */
+/** React & Next */
+#reactNext>.skillImage>img:first-child {
+  animation: rotateOut 0.1s ease-in-out;
+}
+
+#reactNext:hover>.skillImage>img:first-child {
+  animation: rotateIn 3s ease-out infinite;
+}
+
+#reactNext>.skillImage>img:last-child {
+  animation: flipOut 0.1s ease-in-out;
+}
+
+#reactNext:hover>.skillImage>img:last-child {
+  animation: flipIn 3s ease infinite;
+}
+
+/** Typescript */
+#typescript:hover>.blueCircle {
+  animation: colorFillIn 0.3s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+/** GSAP */
+.skillImageGSAP {
+  overflow: hidden;
+}
+
+.skillImageGSAP img:not(:first-child) {
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+#gsap img:nth-child(2) {
+  animation: slideLeftOut 0.2s ease-out;
+}
+
+#gsap:hover img:nth-child(2) {
+  animation: slideLeft 0.2s ease;
+  animation-fill-mode: forwards;
+}
+
+#gsap img:nth-child(3) {
+  animation: slideRightOut 0.2s ease-out;
+}
+
+#gsap:hover img:nth-child(3) {
+  animation: slideRight 0.3s ease;
+  animation-fill-mode: forwards;
+}
+
+/** Figma */
+#figmaSvg path {
+  transition: all 0.2s ease-in-out;
+}
+
+#figma:hover #figmaRed {
+  transform: translate(-10%, -10%);
+  transition-timing-function: ease-in-out;
+}
+
+#figma:hover #figmaOrange {
+  transform: translate(10%, -10%);
+  transition-timing-function: ease-in-out;
+}
+
+#figma:hover #figmaPurple {
+  transform: translateX(-10%);
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+#figma:hover #figmaBlue {
+  transform: translateX(10%);
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+#figma:hover #figmaGreen {
+  transform: translate(-10%, 10%);
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+}
+
+/** Backend */
+#backend>.skillImage>img {
+  animation: squareOut 1s ease-in-out;
+}
+
+#backend:hover>.skillImage>img:first-child {
+  animation: squareLeftIn 2.8s ease-out infinite;
+}
+
+#backend:hover>.skillImage>img:nth-child(2) {
+  animation: squareTopRightIn 2.5s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+
+#backend:hover>.skillImage>img:last-child {
+  animation: squareBottomRightIn 3s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+/** DevOps */
+#devops>.skillImage>img:first-child {
+  animation: swingBackToLeft 0.1s ease-out;
+}
+
+#devops>.skillImage>img:last-child {
+  animation: swingBackToRight 0.1s ease-out;
+}
+
+#devops:hover>.skillImage>img:first-child {
+  animation: swingLeftToRight 0.3s ease-out;
+  animation-fill-mode: forwards;
+}
+
+#devops:hover>.skillImage>img:nth-child(2) {
+  animation: swingRightToLeft 0.3s ease-out;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+}
+
+#devops:hover>.skillImage>img:last-child {
+  animation: swingRight 0.3s ease-in-out;
+  animation-delay: 0.4s;
+  animation-fill-mode: forwards;
+}
+
+/** Other */
+#other:hover>.skillImage>img:first-child {
+  animation: elevator 0.6s ease-out;
+}
+#other:hover>.skillImage>img:nth-child(2) {
+  animation: elevator 0.6s ease-out;
+  animation-delay: 0.2s;
+}
+#other:hover>.skillImage>img:nth-child(3) {
+  animation: elevator 0.6s ease-out;
+  animation-delay: 0.3s;
+}
+
+@keyframes elevator {
+  0% {
+    transform: translateY(0);
+  }
+
+  30% {  
+    transform: translateY(-25%);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  80% {
+    transform: translateY(30%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes swingLeftToRight {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes swingRightToLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(110%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes swingRight {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(50%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes swingBackToLeft {
+  0% {
+    transform: translate(50%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes swingBackToRight {
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes squareOut {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.1;
+  }
+
+  75% {
+    opacity: 0.3;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes squareLeftIn {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%);
+  }
+
+  75% {
+    transform: translate(0, -50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes squareTopRightIn {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(0, -20%);
+  }
+
+  50% {
+    transform: translate(-50%, -20%);
+  }
+
+  75% {
+    transform: translate(-50%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes squareBottomRightIn {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(0, 50%);
+  }
+
+  50% {
+    transform: translate(50%, 50%);
+  }
+
+  75% {
+    transform: translate(50%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    transform: rotate(90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes flipIn {
+  from {
+    transform: rotateX(0deg);
+  }
+
+  50% {
+    transform: rotateX(180deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+
+  }
+}
+
+@keyframes flipOut {
+  from {
+    transform: rotateX(90deg);
+  }
+
+  to {
+    transform: rotateX(0deg);
+
+  }
+}
+
+@keyframes colorFillIn {
+  from {
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+  }
+
+  to {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes colorFillOut {
+  from {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  to {
+    z-index: 0;
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    left: 30%;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    right: 30%;
+  }
+
+  to {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+@keyframes slideLeftOut {
+  from {
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+
+  to {
+    opacity: 0;
+    left: 0;
+    top: -150%;
+  }
+}
+
+@keyframes slideRightOut {
+  from {
+    opacity: 1;
+    bottom: 0;
+    right: 0;
+  }
+
+  to {
+    opacity: 0;
+    right: 0;
+    bottom: -150%;
+  }
+}

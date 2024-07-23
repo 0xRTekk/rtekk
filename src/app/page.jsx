@@ -1,5 +1,6 @@
 "use client";
 import { useEffect } from "react";
+// import LocomotiveScroll from 'locomotive-scroll';
 import Intro from "../components/Hero";
 import Description from "../components/About";
 import Projects from "../components/Projects";

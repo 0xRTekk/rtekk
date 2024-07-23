@@ -1,0 +1,11 @@
+.highlight {
+    position: relative;
+    padding: 5em 0;
+    background-color: #242320;
+    border-radius: 50px;
+    box-shadow: 0px 0px 120px 10px #38363257, 0px 0px 60px 5px #25232138;
+    color: #CCCCC3;
+    opacity: 0;
+    bottom: -250px;
+    transform: scale(1.25);
+}

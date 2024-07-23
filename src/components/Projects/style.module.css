@@ -1,0 +1,50 @@
+.projects {
+    padding-bottom: 2em;
+    border-radius: 50px;
+    background-color: #242320;
+    color: #CCCCC3;
+}
+
+.header {
+    padding: 5vw 10vw;
+}
+.header h2 {
+    font-size: 4.8vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+.header h3 {
+    font-size: 1.8vw;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 3em;
+    position: relative;
+}
+.header p {
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-bottom: 3em;
+}
+.projectList {
+    font-size: 1.2vw;
+}
+.projectListHeading,
+.projectItem {
+    display: flex;
+    flex-direction: row;
+    padding: 1vw 2vw;
+    border-bottom: 2px solid #CCCCC3;
+}
+.projectListHeading {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.projectItem p,
+.projectListHeading p {
+    width: 100%;
+}
+.projectItem p:last-of-type,
+.projectListHeading p:last-of-type{
+    text-align: right;
+}

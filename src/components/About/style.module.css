@@ -1,0 +1,39 @@
+.about{
+    position: relative;
+    margin-left: 10vw;
+    padding-bottom: 5em;
+}
+.about h2 {
+    color: #080807;
+    font-size: 4.8vw;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+.about h3 {
+    font-size: 1.8vw;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 3em;
+    position: relative;
+}
+.about p{
+    color: #383632;
+    font-size: 1.5vw;
+    font-weight: 600;
+}
+.socials {
+    margin-top: 5em;
+    display: flex;
+    gap: 4em;
+}
+.socials a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #383632;
+    border-radius: 50%;
+}

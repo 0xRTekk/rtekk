@@ -17,12 +17,14 @@
 } */
 
 body {
+  position: relative;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   overflow: hidden;
-  background: #F1E9D4;
+  background-color: #F1E9D4;
   font-family: "Poppins", sans-serif !important;
+  z-index: 10;
 }
 
 /* @layer utilities {

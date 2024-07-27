@@ -1,8 +1,13 @@
-.about{
+.about {
     position: relative;
-    margin-left: 10vw;
+    padding-top: 5em;
+    padding-left: 10vw;
     padding-bottom: 5em;
+    z-index: 1;
+    margin-bottom: 80vh;
+    background-color: #F1E9D4;
 }
+
 .about h2 {
     color: #080807;
     font-size: 4.8vw;
@@ -10,6 +15,7 @@
     text-transform: uppercase;
     margin: 0;
 }
+
 .about h3 {
     font-size: 1.8vw;
     font-weight: 700;
@@ -17,16 +23,52 @@
     margin-bottom: 3em;
     position: relative;
 }
-.about p{
-    color: #383632;
-    font-size: 1.5vw;
-    font-weight: 600;
+
+.aboutContainer {
+    position: relative;
+    display: flex;
+    flex-direction: row;
 }
+
+.aboutImage{
+    position: relative;
+    width: 350px;
+    height: 475px;
+}
+
+.aboutImage img{
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.paragraph {
+    max-width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1;
+    color: #383632;
+}
+
+.word {
+    position: relative;
+    margin-right: 12px;
+    margin-top: 12px;
+}
+
+.shadow {
+    position: absolute;
+    opacity: 20%;
+}
+
 .socials {
     margin-top: 5em;
     display: flex;
     gap: 4em;
 }
+
 .socials a {
     position: relative;
     display: flex;
@@ -36,4 +78,9 @@
     height: 80px;
     background-color: #383632;
     border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.socials a:hover {
+    background-color: #E4ADD1;
 }

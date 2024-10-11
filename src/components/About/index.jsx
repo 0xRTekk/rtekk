@@ -14,7 +14,7 @@ export default function Index() {
         <Paragraph paragraph={paragraph} />
         <div className={styles.aboutImage}>
           <Image
-            src={'/images/hero_image.jfif'}
+            src={'/images/hero_image.jpg'}
             alt="About picture"
             fill={true} 
             priority={true}

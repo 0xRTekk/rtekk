@@ -61,7 +61,7 @@ export default function Index() {
 
         <div ref={introImage} className={styles.introImage}>
           <Image
-            src={'/images/hero_image.jfif'}
+            src={'/images/hero_image.jpg'}
             alt="intro image"
             fill={true} 
             priority={true}

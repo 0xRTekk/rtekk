@@ -31,20 +31,51 @@
 }
 .projectListHeading,
 .projectItem {
+    position: relative;
     display: flex;
     flex-direction: row;
-    padding: 1vw 2vw;
     border-bottom: 2px solid #CCCCC3;
 }
 .projectListHeading {
     text-transform: uppercase;
     font-weight: 600;
 }
+.projectItem {
+    overflow: hidden;
+    cursor: pointer;
+}
+.projectItem:hover p {
+    color: #242320;
+    z-index: 1;
+}
+.projectItem:hover p:first-of-type {
+    padding-left: 3vw;
+    padding-right: 1vw;
+}
+.projectItem:hover .projectItemBackground {
+    top: 0;
+}
 .projectItem p,
 .projectListHeading p {
+    position: relative;
     width: 100%;
+    padding: 1vw 2vw;
+    transition: color 700ms;
+}
+.projectItem p:first-of-type {
+    transition: padding 500ms;
 }
 .projectItem p:last-of-type,
 .projectListHeading p:last-of-type{
     text-align: right;
+    flex-basis: min-content;
+}
+.projectItemBackground {
+    transition: all 200ms;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #CCCCC3;
+    position: absolute;
+    top: -100%;
 }
